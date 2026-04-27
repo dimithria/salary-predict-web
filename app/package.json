@@ -1,0 +1,60 @@
+
+{
+  "name": "previsor-salarios-web",
+  "version": "1.0.0",
+  "description": "Aplicação web para previsão de salários em profissões de TI no Brasil",
+  "main": "index.html",
+  "scripts": {
+    "start": "Abra index.html em um navegador",
+    "build": "Não requer build - arquivos estáticos"
+  },
+  "keywords": [
+    "salários",
+    "previsão",
+    "TI",
+    "carreira",
+    "web-app",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "structure": {
+    "description": "Estrutura do projeto",
+    "files": {
+      "index.html": "Arquivo HTML principal com estrutura da aplicação",
+      "css/style.css": "Estilos CSS da aplicação",
+      "js/app.js": "Lógica JavaScript da aplicação",
+      "assets": "Pasta para recursos (imagens, ícones, etc)"
+    }
+  },
+  "technologies": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (Vanilla)"
+    ],
+    "fonts": [
+      "Google Fonts - Inter"
+    ]
+  },
+  "features": [
+    "Cálculo de salário com múltiplos fatores",
+    "Visualizações interativas (gráficos, tabelas)",
+    "Interface escura e moderna",
+    "Design totalmente responsivo",
+    "Sem dependências externas",
+    "Animações suaves"
+  ],
+  "notes": {
+    "salaryCalculation": "Leva em conta: cargo, experiência, região, formação, tamanho da empresa, idiomas, habilidades técnicas",
+    "currency": "Todos os valores em R$ (Reais)",
+    "salaryBasis": "Valores mensais com cálculo de anual (×13)",
+    "marketYear": "Ajustado para 2026"
+  }
+}

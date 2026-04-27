@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsor de Salários</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">💰</div>
+            <span>SalaryPredict</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Previsor</a></li>
+                <li><a href="#mercado">Mercado</a></li>
+                <li><a href="#tendencias">Tendências</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main-container">
+
+        <!-- Form Panel -->
+        <aside class="form-panel">
+            <div class="panel">
+                <h2 class="panel-title">🎯 Seus Dados</h2>
+
+                <div class="form-group">
+                    <label class="form-label">Cargo / Função</label>
+                    <select class="form-select" id="cargo">
+                        <option value="desenvolvedor">Desenvolvedor de Software</option>
+                        <option value="engenheiro">Engenheiro de Software</option>
+                        <option value="cientista">Cientista de Dados</option>
+                        <option value="analista">Analista de Dados</option>
+                        <option value="product">Product Manager</option>
+                        <option value="ux">UX/UI Designer</option>
+                        <option value="devops">DevOps / SRE</option>
+                        <option value="qa">QA Engineer</option>
+                        <option value="mobile">Desenvolvedor Mobile</option>
+                        <option value="frontend">Frontend Developer</option>
+                        <option value="backend">Backend Developer</option>
+                        <option value="fullstack">Full Stack Developer</option>
+                        <option value="security">Especialista em Segurança</option>
+                        <option value="cloud">Cloud Architect</option>
+                        <option value="gerente">Gerente de TI</option>
+                        <option value="cto">CTO / Diretor de Tecnologia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nível de Experiência</label>
+                    <select class="form-select" id="nivel">
+                        <option value="junior">Júnior (0-2 anos)</option>
+                        <option value="pleno" selected>Pleno (2-5 anos)</option>
+                        <option value="senior">Sênior (5-10 anos)</option>
+                        <option value="especialista">Especialista (10+ anos)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Anos de Experiência: <span class="range-value"
+                            id="anos-val">3</span></label>
+                    <div class="range-container">
+                        <span style="font-size:0.75rem;color:var(--text-muted)">0</span>
+                        <input type="range" id="anos" min="0" max="20" value="3" step="0.5">
+                        <span style="font-size:0.75rem;color:var(--text-muted)">20+</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Região</label>
+                    <select class="form-select" id="regiao">
+                        <option value="sp">São Paulo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="pr">Paraná</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="df">Distrito Federal</option>
+                        <option value="ba">Bahia</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="ce">Ceará</option>
+                        <option value="remoto">100% Remoto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Formação Acadêmica</label>
+                    <select class="form-select" id="formacao">
+                        <option value="tecnico">Técnico / Curso Profissionalizante</option>
+                        <option value="bacharel" selected>Bacharelado / Graduação</option>
+                        <option value="pos">Pós-graduação / MBA</option>
+                        <option value="mestrado">Mestrado</option>
+                        <option value="doutorado">Doutorado</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Tamanho da Empresa</label>
+                    <select class="form-select" id="empresa">
+                        <option value="startup">Startup (1-50)</option>
+                        <option value="pequena">Pequena (51-200)</option>
+                        <option value="media" selected>Média (201-1000)</option>
+                        <option value="grande">Grande (1000-5000)</option>
+                        <option value="enterprise">Enterprise (5000+)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Habilidades / Tecnologias</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="python" checked>
+                            <span>Python</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="javascript">
+                            <span>JavaScript</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="react">
+                            <span>React</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="aws">
+                            <span>AWS</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="docker">
+                            <span>Docker</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="kubernetes">
+                            <span>Kubernetes</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="sql">
+                            <span>SQL</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="machine">
+                            <span>Machine Learning</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="typescript">
+                            <span>TypeScript</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="go">
+                            <span>Go</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="rust">
+                            <span>Rust</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" value="blockchain">
+                            <span>Blockchain</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Idiomas Adicionais</label>
+                    <select class="form-select" id="idiomas">
+                        <option value="0">Apenas Português</option>
+                        <option value="1" selected>Inglês (técnico)</option>
+                        <option value="2">Inglês fluente</option>
+                        <option value="3">Inglês + outro idioma</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" id="prever-btn" onclick="preverSalario()">
+                    🔮 Calcular Previsão
+                </button>
+                <button class="btn btn-secondary" onclick="limparForm()">
+                    🔄 Limpar
+                </button>
+            </div>
+
+            <!-- Factors -->
+            <div class="panel" id="fatores-panel" style="display:none;">
+                <h2 class="panel-title">📊 Fatores de Impacto</h2>
+                <div class="factors-list" id="factors-list">
+                    <!-- Preenchido via JS -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Results Panel -->
+        <div class="results-panel" id="results-panel">
+
+            <!-- Empty State -->
+            <div class="empty-state" id="empty-state">
+                <div class="empty-state-icon">📊</div>
+                <h3>Preencha os dados ao lado</h3>
+                <p>Clique em "Calcular Previsão" para ver a estimativa salarial</p>
+            </div>
+
+            <!-- Results Content -->
+            <div id="results-content" style="display:none;">
+
+                <!-- Main Salary Card -->
+                <div class="salary-card animate-in">
+                    <div class="salary-label">Salário Estimado (mensal)</div>
+                    <div class="salary-value" id="salario-mensal">R$ 0,00</div>
+                    <div class="salary-range">
+                        Faixa: <span id="salario-min">R$ 0,00</span> — <span id="salario-max">R$ 0,00</span>
+                    </div>
+                    <div style="margin-top:1rem; font-size:0.85rem; color:var(--text-muted);">
+                        Base anual: <strong id="salario-anual">R$ 0,00</strong>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card animate-in" style="animation-delay:0.1s">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-value" id="percentil">75º</div>
+                        <div class="stat-label">Percentil no Mercado</div>
+                    </div>
+                    <div class="stat-card animate-in" style="animation-delay:0.2s">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-value" id="confianca">92%</div>
+                        <div class="stat-label">Confiança da Previsão</div>
+                    </div>
+                    <div class="stat-card animate-in" style="animation-delay:0.3s">
+                        <div class="stat-icon">💵</div>
+                        <div class="stat-value" id="clt-vs-pj">CLT</div>
+                        <div class="stat-label">Melhor Regime</div>
+                    </div>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="panel animate-in" style="animation-delay:0.4s">
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab('comparativo')">📊 Comparativo</button>
+                        <button class="tab" onclick="switchTab('evolucao')">📈 Evolução</button>
+                        <button class="tab" onclick="switchTab('detalhes')">🔍 Detalhes</button>
+                    </div>
+
+                    <!-- Tab: Comparativo -->
+                    <div id="tab-comparativo" class="tab-content active">
+                        <div class="chart-title">Comparativo por Região</div>
+                        <div class="bar-chart" id="bar-chart">
+                            <!-- Preenchido via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Tab: Evolução -->
+                    <div id="tab-evolucao" class="tab-content">
+                        <div class="chart-title">Projeção de Crescimento Salarial</div>
+                        <div class="bar-chart" id="evolution-chart">
+                            <!-- Preenchido via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Tab: Detalhes -->
+                    <div id="tab-detalhes" class="tab-content">
+                        <div class="chart-title">Detalhamento do Cálculo</div>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Fator</th>
+                                    <th>Valor Base</th>
+                                    <th>Ajuste</th>
+                                    <th>Impacto</th>
+                                </tr>
+                            </thead>
+                            <tbody id="details-table">
+                                <!-- Preenchido via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Heatmap -->
+                <div class="panel animate-in" style="animation-delay:0.5s">
+                    <div class="chart-title">📅 Demanda Sazonal (últimos 12 meses)</div>
+                    <div class="heatmap" id="heatmap"></div>
+                    <div class="heatmap-legend">
+                        <span>Baixa</span>
+                        <div class="legend-bar" style="background: var(--bg);"></div>
+                        <span>Alta</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
